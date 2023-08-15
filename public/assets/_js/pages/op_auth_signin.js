@@ -1,9 +1,3 @@
-/*
- *  Document   : op_auth_signin.js
- *  Author     : pixelcave
- *  Description: Custom JS code used in Sign In Page
- */
-
 // Form Validation, for more examples you can check out https://github.com/jzaefferer/jquery-validation
 class pageAuthSignIn {
   /*

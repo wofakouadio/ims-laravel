@@ -48,7 +48,7 @@
                                     </div>
                                 </div>
                                 <div class="block-content block-content-full bg-body-light text-center d-flex justify-content-between">
-                                    <a class="fs-sm fw-medium link-fx text-muted me-2 mb-1 d-inline-block"></a>
+                                    <a class="fs-sm fw-medium link-fx text-muted me-2 mb-1 d-inline-block" href="https://wofakouadio.github.io">Francis Bennett</a>
                                     <a class="fs-sm fw-medium link-fx text-muted me-2 mb-1 d-inline-block">
                                         &copy All reserved | IMS | {{date('Y')}} | v 1.0
                                     </a>

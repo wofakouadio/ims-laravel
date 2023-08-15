@@ -1,11 +1,10 @@
-
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-    <title>Login | IMS - Laravel</title>
+    <title>Super-Admin | IMS - Laravel</title>
 
     <meta name="author" content="https://wofakouadio.github.io">
     <meta name="robots" content="noindex, nofollow">
@@ -32,6 +31,12 @@
     <!-- END Icons -->
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{asset('assets/js/plugins/sweetalert2/sweetalert2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/js/plugins/select2/css/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/js/plugins/datatables-bs5/css/dataTables.bootstrap5.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/js/plugins/datatables-buttons-bs5/css/buttons.bootstrap5.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/js/plugins/datatables-responsive-bs5/css/responsive.bootstrap5.min.css')}}">
     <!-- Codebase framework -->
     <link rel="stylesheet" id="css-main" href="{{asset('assets/css/codebase.min.css')}}">
 
@@ -92,11 +97,27 @@
 
     'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
 -->
-<div id="page-container" class="main-content-boxed">
+<div id="page-container" class="sidebar-o enable-page-overlay side-scroll page-header-modern main-content-boxed">
+
+    <!-- Side Overlay-->
+    <x-aside-overlay/>
+    <!-- END Side Overlay -->
+
+    <!-- Sidebar -->
+    <x-super-admin-menu/>
+    <!-- END Sidebar -->
+
+    <!-- Header -->
+    <x-super-admin-header/>
+    <!-- END Header -->
 
     <!-- Main Container -->
     @yield('content')
     <!-- END Main Container -->
+
+    <!-- Footer -->
+    <x-footer-version/>
+    <!-- END Footer -->
 </div>
 <!-- END Page Container -->
 
@@ -108,13 +129,30 @@
 -->
 <script src="{{asset('assets/js/codebase.app.min.js')}}"></script>
 
-<!-- jQuery (required for Select2 + jQuery Validation plugins) -->
+<!-- jQuery (required for BS Datepicker + BS Maxlength + Select2 + Masked Inputs + Ion Range Slider + Password Strength Meter plugins) -->
 <script src="{{asset('assets/js/lib/jquery.min.js')}}"></script>
 
 <!-- Page JS Plugins -->
-<script src="{{asset('assets/js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/select2/js/select2.full.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-bs5/js/dataTables.bootstrap5.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-responsive-bs5/js/responsive.bootstrap5.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-buttons/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-buttons-bs5/js/buttons.bootstrap5.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-buttons-jszip/jszip.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-buttons-pdfmake/pdfmake.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-buttons-pdfmake/vfs_fonts.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-buttons/buttons.print.min.js')}}"></script>
+<script src="{{asset('assets/js/plugins/datatables-buttons/buttons.html5.min.js')}}"></script>
 
 <!-- Page JS Code -->
-<script src="{{asset('assets/js/pages/op_auth_signin.min.js')}}"></script>
+<script src="{{asset('assets/js/pages/be_comp_dialogs.min.js')}}"></script>
+<script src="{{asset('assets/js/pages/be_tables_datatables.min.js')}}"></script>
+
+<!-- Page JS Helpers (Flatpickr + BS Datepicker + BS Maxlength + Select2 + Ion Range Slider + Masked Inputs + Password Strength Meter plugins) -->
+<script>Codebase.helpersOnLoad(['jq-datepicker', 'jq-select2']);</script>
 </body>
 </html>
