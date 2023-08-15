@@ -112,6 +112,7 @@
     <!-- END Header -->
 
     <!-- Main Container -->
+    @include('sweetalert::alert')
     @yield('content')
     <!-- END Main Container -->
 

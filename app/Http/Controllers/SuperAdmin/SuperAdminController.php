@@ -4,6 +4,8 @@ namespace App\Http\Controllers\SuperAdmin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+Use RealRashid\SweetAlert\Facades\Alert;
+
 
 class SuperAdminController extends Controller
 {

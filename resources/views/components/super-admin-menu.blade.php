@@ -36,7 +36,7 @@
             <div class="content-side content-side-full">
                 <ul class="nav-main">
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="">
+                        <a class="nav-main-link {{url()->current() === '/super-admin/dashboard' ? 'active' : ''}}" href="">
                             <i class="nav-main-link-icon fa fa-home"></i>
                             <span class="nav-main-link-name">Home</span>
                         </a>
@@ -93,13 +93,13 @@
                     </li>
                     <li class="nav-main-heading">Users</li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="/super-admin/new-user">
+                        <a class="nav-main-link {{url()->current() === route('new-user') ? 'active' : ''}}" href="/super-admin/new-user">
                             <i class="nav-main-link-icon fa fa-user-plus"></i>
                             <span class="nav-main-link-name">New User</span>
                         </a>
                     </li>
                     <li class="nav-main-item">
-                        <a class="nav-main-link" href="/super-admin/all-users">
+                        <a class="nav-main-link {{url()->current() === route('all-users') ? 'active' : ''}}" href="/super-admin/all-users">
                             <i class="nav-main-link-icon fa fa-users-line"></i>
                             <span class="nav-main-link-name">Users</span>
                         </a>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SuperAdmin\SuperAdminController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,11 @@ Route::get('/', function () {
 
 Route::prefix('super-admin')->group(function (){
     //show new user page to register new user
-    Route::get('/new-user', [SuperAdminController::class, 'show_new_user_page']);
+    Route::get('/new-user', [SuperAdminController::class, 'show_new_user_page'])->name('new-user');
     //show all users
-    Route::get('/all-users', [SuperAdminController::class, 'show_all_users_page']);
+    Route::get('/all-users', [SuperAdminController::class, 'show_all_users_page'])->name('all-users');
+    //Create new user
+    Route::post('/register-new-user', [UserController::class, 'store'])->name('register-new-user');
 });
+
+

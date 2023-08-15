@@ -9,15 +9,29 @@
                     <h3 class="block-title">New User</h3>
                 </div>
                 <div class="block-content">
-                    <form action="" method="POST"  enctype="multipart/form-data" >
+                    <form action="{{route('register-new-user')}}" method="POST"  enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col">
                                 <div class="form-floating mb-4">
-                                    <input type="text" class="form-control" id="example-text-input-floating" name="user_name" placeholder="John Doe">
-                                    <label class="form-label" for="example-text-input-floating">Name</label>
+                                    <input type="text" class="form-control" id="example-text-input-floating" name="sur_name" placeholder="John Doe">
+                                    <label class="form-label" for="example-text-input-floating">SurName</label>
                                 </div>
                             </div>
+                            <div class="col">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="example-text-input-floating" name="middle_name" placeholder="John Doe">
+                                    <label class="form-label" for="example-text-input-floating">Middle Name</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-4">
+                                    <input type="text" class="form-control" id="example-text-input-floating" name="last_name" placeholder="John Doe">
+                                    <label class="form-label" for="example-text-input-floating">LastName</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col">
                                 <div class="form-floating mb-4">
                                     <input type="date" class="form-control" id="example-text-input-floating" name="user_dob" placeholder="Y-m-d">
